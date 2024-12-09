@@ -13,7 +13,7 @@ def login_page():
     # Input fields for username and password
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
-    email = st.text_input("Email",type='email')
+    email = st.text_input("Email")
 
     # Check credentials when login button is pressed
     if st.button("Login"):
