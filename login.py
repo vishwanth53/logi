@@ -1,9 +1,9 @@
 import streamlit as st
 
 # Function for checking login credentials
-def check_credentials(username, password):
+def check_credentials(username, password,email):
     # Simple static check for credentials
-    if username == "Vishwanth" and password == "Vishwanth":
+    if username == "varun" and password == "varun123" and email=="varunkumar243@gmail.com":
         return True
     return False
 
@@ -13,10 +13,11 @@ def login_page():
     # Input fields for username and password
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
+    email = st.text_input("Email",type='email')
 
     # Check credentials when login button is pressed
     if st.button("Login"):
-        if check_credentials(username, password):
+        if check_credentials(username, password,email):
             st.success("Login successful!")
             # Set the session state for login status
             st.session_state['logged_in'] = True
